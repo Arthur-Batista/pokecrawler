@@ -1,0 +1,13 @@
+venv/
+env/
+.env
+*.db
+pokemons.db
+images/
+*.log
+crawler.log
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+.idea/
