@@ -212,12 +212,11 @@ async def scrap_pokemon_info(client: httpx.AsyncClient, soup: BeautifulSoup) -> 
         pokemon_data = {
             "name": name,
             "category": get_category(info_card),
-            "pokedex_number": get_pokedex_number(info_card), # Agora já volta como INT limpo
+            "pokedex_number": get_pokedex_number(info_card),
             "types": get_types(info_card),
             "evolution": get_evolution(soup, name),
             "abilities": get_skills(info_card),
             "stats": get_stats(soup),
-            # Precisamos usar 'await' e passar o client
             "image_path": await download_image(client, image_url, name) if image_url else None
         }
 
