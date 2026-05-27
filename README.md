@@ -22,7 +22,7 @@ Para atender ao requisito de concorrência e alto volume de dados, a arquitetura
 * **Resiliência**: O motor de extração conta com um mecanismo nativo de *retry*. Em caso de instabilidade de rede ou limite de requisições, o crawler aplica um tempo de espera exponencial antes de tentar novamente, garantindo resiliência sem adicionar bibliotecas extras complexas.
 * **Logging**: O pipeline gera registros operacionais (terminal e arquivo `crawler.log`), criando uma trilha de auditoria essencial para monitoramento e debug em ambientes automatizados.
 
-## 🚀 Como Executar
+## Como Executar
 
 ### 1. Pré-requisitos
 Certifique-se de ter o Python 3.10+ instalado no seu sistema.
