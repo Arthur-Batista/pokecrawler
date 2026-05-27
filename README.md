@@ -1,5 +1,4 @@
-cat << 'EOF' > README.md
-# Poké-Crawler 👾
+# Poké-Crawler
 
 Este projeto é um web crawler assíncrono desenvolvido para extrair informações detalhadas de Pokémon do portal Bulbapedia. O sistema realiza requisições de rede de forma concorrente, faz o parsing do HTML e normaliza os dados brutos em um banco de dados relacional.
 
