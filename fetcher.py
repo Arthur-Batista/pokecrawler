@@ -27,7 +27,6 @@ async def get_soup(
                 logging.error(f"Falha ao acessar {url} após {max_retries} tentativas: {e}")
                 raise e
             
-            # Backoff Exponencial: espera 1s, depois 2s, depois 4s...
             tempo_espera = 2 ** attempt
             await asyncio.sleep(tempo_espera)
 
@@ -72,11 +71,9 @@ async def download_image(
     path = f"{IMAGES_DIR}/{name}.{ext}"
 
     try:
-        # Requisição assíncrona usando o client repassado
         response = await client.get(url, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()
 
-        # I/O de disco assíncrono
         async with aiofiles.open(path, "wb") as f:
             await f.write(response.content)
 
